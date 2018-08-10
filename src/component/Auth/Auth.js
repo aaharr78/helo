@@ -1,12 +1,41 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
-class Auth extends Component{
-    render(){
+class Auth extends Component {
+    constructor() {
+        super()
+
+        this.state = {
+            user: null,
+            password: null,
+        }
+    }
+
+    login = () => {
+        let auth0domain = `https://${process.env.REACT_APP_AUTH0_DOMAIN}`
+        let clientId = process.env.REACT_APP_AUTH0_CLIENT_ID
+        let scope = encodeURIComponent('openid profile email')
+        let redirectUri = encodeURIComponent(`${window.location.origin}/auth/callback`)
+
+        let location = `${auth0domain}/authorize?client_id=${clientId}&scope=${scope}&redirect_uri=${redirectUri}&response_type=code`
+
+        window.location = location
+
+    }
+
+    render() {
         return (
             <div>
-                Auth
+                {this.props.user}
+
+                <button onClick={this.login}>Login</button>
             </div>
         )
     }
 }
-export default Auth
+    let mapStateToProps = state => {
+        return {
+            user: state.user.data
+        }
+    }
+    export default connect(mapStateToProps)(Auth)

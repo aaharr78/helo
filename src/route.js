@@ -11,14 +11,12 @@ class Routes extends Component {
 
     render() {
         return (
-            <div>
                 <Switch>
                     <Route path="/" component={Auth} exact />
                     <Route path="/dashboard" component={Dashboard} />
                     <Route path="/post/:id" component={Post} />
                     <Route path="/new" component={Form} />
                 </Switch>
-            </div>
         )
     }
 }

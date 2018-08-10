@@ -15,7 +15,7 @@ massive(process.env.CONNECTION_STRING).then( db => {
 
 app.use(bodyParser.json())
 
-
+// app.post('/api/posts', controller.create)
 
 
 app.listen(port, () => {
