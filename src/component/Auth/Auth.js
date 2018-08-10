@@ -6,8 +6,8 @@ class Auth extends Component {
         super()
 
         this.state = {
-            user: null,
-            password: null,
+            user: '',
+            password: '',
         }
     }
 

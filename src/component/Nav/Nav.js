@@ -1,7 +1,7 @@
 import React from 'react'
 import {withRouter} from 'react-router'
 import {Link} from 'react-router-dom'
-import { connect } from 'react-redux'
+// import { connect } from 'react-redux'
 
 function Nav(props){
     return(
@@ -19,4 +19,4 @@ function Nav(props){
 //     }
 //   }
 
-export default connect( withRouter)(Nav)
+export default withRouter(Nav)

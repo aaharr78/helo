@@ -10,7 +10,7 @@ const GET_PROFILEPICTURE_FULFILLED = 'GET_PROFILEPICTURE_FULFILLED'
 let initialState = {
     userName: '',
     id: '',
-    profilePicture: '',
+    profile_pic: '',
 
 }
 

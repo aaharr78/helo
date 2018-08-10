@@ -1,7 +1,18 @@
 import React, { Component } from 'react'
+import {connect} from 'react-redux'
 
-class Form extends Component{
-    render(){
+class Form extends Component {
+    constructor() {
+        super()
+
+        this.state = {
+            title: '',
+            img: '',
+            content: ''
+        }
+    }
+
+    render() {
         return (
             <div>
                 Form
@@ -9,4 +20,4 @@ class Form extends Component{
         )
     }
 }
-export default Form
+export default connect(Form)

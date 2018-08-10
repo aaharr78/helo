@@ -7,7 +7,7 @@ import Nav from './component/Nav/Nav'
 // import Dashboard from './component/Dashboard/Dashboard'
 // import Form from './component/Form/Form'
 // import Post from './component/Post/Post'
-import Routes from './route'
+import Routes from './routes'
 
 class App extends Component {
   render() {

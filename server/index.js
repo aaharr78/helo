@@ -16,12 +16,12 @@ massive(process.env.CONNECTION_STRING).then( db => {
 app.use(session({
     secret: process.env.SESSION_SECRET,
     resave: false,
-    saveUninitialized: false
+    saveUninitialized: true
 }))
 
 app.use(bodyParser.json())
 
-// app.post('/api/posts', controller.create)
+app.post('/api/posts', controller.create)
 
 
 app.listen(port, () => {
