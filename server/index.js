@@ -2,6 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const massive = require('massive')
 const session = require('express-session')
+// const path = require('path')
 require('dotenv').config();
 
 const app = express()
@@ -21,8 +22,20 @@ app.use(session({
 
 app.use(bodyParser.json())
 
-app.post('/api/posts', controller.create)
 
+// app.use(express.static(`${__dirname}/../build`))
+
+
+app.post('/api/posts', controller.login)
+
+
+// app.get('/*', function(req, res) {
+//     res.sendFile(path.join(__dirname, '../build/index.html'), function(err) {
+//       if (err) {
+//         res.status(500).send(err)
+//       }
+//     })
+//   })
 
 app.listen(port, () => {
     console.log('listening on port:', port)

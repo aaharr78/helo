@@ -15,7 +15,7 @@ function Nav(props){
 // let mapStateToProps = state => {
 //     return {
 //       userName: state.userName.data,
-//       email: state.email.data
+//       password: state.password.data
 //     }
 //   }
 
